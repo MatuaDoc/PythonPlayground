@@ -1,5 +1,6 @@
 {
-    "typeCheckingMode": "strict",
+    "analyzeUnannotatedFunctions": true,
+    "failOnWarnings": true,
     "pythonVersion": "3.14",
     "reportMissingTypeStubs": false,
     "reportAny": "error",
@@ -7,5 +8,10 @@
     "reportImplicitOverride": "error",
     "reportImplicitStringConcatenation": "error",
     "reportImportCycles": "warning",
-    "reportUnreachable": "error"
+    "reportUnreachable": "error",
+    "strictDictionaryInference": true,
+    "strictListInference": true,
+    "strictParameterNoneValue": true,
+    "strictSetInference": true,
+    "typeCheckingMode": "strict",
 }
