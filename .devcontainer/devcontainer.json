@@ -5,6 +5,7 @@
         "vscode": {
             "extensions": [
                 "aaron-bond.better-comments",
+                "charliermarsh.ruff",
                 "christian-kohler.path-intellisense",
                 "detachhead.basedpyright",
                 "eamodio.gitlens",
@@ -41,28 +42,37 @@
                 },
                 "python.analysis.typeCheckingMode": "off",
                 "basedpyright.analysis.typeCheckingMode": "all",
-                "basedpyright.analysis.configFilePath": "${workspaceFolder}/pyrightconfig.json",
+                "basedpyright.analysis.configFilePath": "${workspaceFolder}/.config/pyrightconfig.json",
                 "basedpyright.analysis.diagnosticMode": "workspace",
                 "gitdoc.commitValidationLevel": "none",
                 "gitdoc.enabled": true,
                 "chat.disableAIFeatures": true,
+                "ruff.format.preview": true,
+                "ruff.lint.preview": true,
+                "ruff.configuration": ".config/ruff.toml",
                 "workbench.colorTheme": "Xcode Classic (Light)",
                 "actionButtons": {
                     "commands": [
                         {
                             "cwd": "{workspaceFolder}",
-                            "name": "$(pencil) Format file",
+                            "name": "$(play) Run",
+                            "useVsCodeApi": true,
+                            "command": "workbench.action.debug.start"
+                        },
+                        {
+                            "cwd": "{workspaceFolder}",
+                            "name": "$(pencil) Format",
                             "useVsCodeApi": true,
                             "command": "editor.action.formatDocument"
                         },
                         {
                             "cwd": "${workspaceFolder}",
-                            "name": "$(terminal-view-icon) New Terminal",
+                            "name": "$(terminal-view-icon) New term",
                             "useVsCodeApi": true,
                             "command": "workbench.action.terminal.newInActiveWorkspace"
                         },
                         {
-                            "name": "$(terminal-kill) Kill all Terminals",
+                            "name": "$(terminal-kill) Kill terms",
                             "useVsCodeApi": true,
                             "command": "workbench.action.terminal.killAll"
                         }

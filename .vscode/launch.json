@@ -7,7 +7,15 @@
             "request": "launch",
             "program": "${workspaceFolder}/app/main.py",
             "console": "integratedTerminal",
-            "preLaunchTask": "basedpyright"
+            "preLaunchTask": "Typecheck"
+        },
+        {
+            "name": "Run file",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "preLaunchTask": "Typecheck"
         }
     ]
 }
