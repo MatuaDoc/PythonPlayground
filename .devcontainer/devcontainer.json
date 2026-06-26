@@ -4,7 +4,6 @@
     "customizations": {
         "vscode": {
             "extensions": [
-                "ms-python.python",
                 "detachhead.basedpyright",
                 "eamodio.gitlens",
                 "GitHub.vscode-pull-request-github",
@@ -26,7 +25,7 @@
                 "editor.inlayHints.enabled": "off",
                 "editor.fontSize": 18,
                 "editor.rulers": [
-                    120
+                    80
                 ],
                 "editor.tokenColorCustomizations": {
                     "textMateRules": [

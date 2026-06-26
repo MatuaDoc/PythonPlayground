@@ -1,34 +1,13 @@
 {
+    "version": "0.2.0",
     "configurations": [
         {
-            "type": "swift",
+            "name": "Run Python",
+            "type": "python",
             "request": "launch",
-            "args": [],
-            "cwd": "${workspaceFolder:SwiftPlayground}",
-            "name": "Debug SwiftPlayground",
-            "target": "SwiftPlayground",
-            "configuration": "debug",
-            "preLaunchTask": "swift: Build Debug SwiftPlayground",
-            "disableASLR": false,
-            "initCommands": [
-                "settings set target.disable-aslr false"
-            ],
-            "runInTerminal": true
-        },
-        {
-            "type": "swift",
-            "request": "launch",
-            "args": [],
-            "cwd": "${workspaceFolder:SwiftPlayground}",
-            "name": "Release SwiftPlayground",
-            "target": "SwiftPlayground",
-            "configuration": "release",
-            "preLaunchTask": "swift: Build Release SwiftPlayground",
-            "disableASLR": false,
-            "initCommands": [
-                "settings set target.disable-aslr false"
-            ],
-            "runInTerminal": true
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "preLaunchTask": "basedpyright"
         }
     ]
 }

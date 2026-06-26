@@ -1,4 +1,4 @@
-# Swift Playground
+# Python Playground
 
 ## Open the project locally on your computer (Visual Studio Code + Docker)
 
