@@ -2,9 +2,9 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "basedpyright",
+            "label": "Typecheck",
             "type": "shell",
-            "command": "basedpyright",
+            "command": "basedpyright && mypy --ignore-missing-imports .",
             "group": "build",
             "problemMatcher": []
         }

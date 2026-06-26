@@ -1,22 +1,24 @@
 {
     "image": "mcr.microsoft.com/devcontainers/python:3.14-trixie",
-    "postCreateCommand": "pip install --user basedpyright",
+    "postCreateCommand": "python3 -m pip install --user basedpyright mypy",
     "customizations": {
         "vscode": {
             "extensions": [
+                "aaron-bond.better-comments",
+                "christian-kohler.path-intellisense",
                 "detachhead.basedpyright",
                 "eamodio.gitlens",
+                "fosshaas.fontsize-shortcuts",
                 "GitHub.vscode-pull-request-github",
-                "yzhang.markdown-all-in-one",
-                "SirTori.indenticator",
-                "oderwat.indent-rainbow",
                 "IgorSbitnev.error-gutters",
-                "usernamehw.errorlens",
-                "aaron-bond.better-comments",
-                "vsls-contrib.gitdoc",
-                "christian-kohler.path-intellisense",
                 "mateocerquetella.xcode-12-theme",
-                "seunlanlege.action-buttons"
+                "matangover.mypy",
+                "oderwat.indent-rainbow",
+                "seunlanlege.action-buttons",
+                "SirTori.indenticator",
+                "usernamehw.errorlens",
+                "vsls-contrib.gitdoc",
+                "yzhang.markdown-all-in-one"
             ],
             "settings": {
                 "gitlens.showWhatsNewAfterUpgrades": false,
@@ -47,11 +49,6 @@
                 "workbench.colorTheme": "Xcode Classic (Light)",
                 "actionButtons": {
                     "commands": [
-                        {
-                            "cwd": "${workspaceFolder}",
-                            "name": "$(check) Type check project",
-                            "command": "basedpyright"
-                        },
                         {
                             "cwd": "{workspaceFolder}",
                             "name": "$(pencil) Format file",
