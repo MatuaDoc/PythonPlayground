@@ -37,11 +37,7 @@
                         }
                     ]
                 },
-                "python.analysis.typeCheckingMode": "strict",
-                "python.analysis.diagnosticMode": "workspace",
-                "python.analysis.inlayHints.variableTypes": false,
-                "python.analysis.inlayHints.functionReturnTypes": false,
-                "python.analysis.inlayHints.callArgumentNames": false,
+                "python.analysis.typeCheckingMode": "off",
                 "basedpyright.analysis.typeCheckingMode": "strict",
                 "basedpyright.analysis.diagnosticMode": "workspace",
                 "basedpyright.analysis.inlayHints.variableTypes": false,
@@ -57,6 +53,12 @@
                             "cwd": "${workspaceFolder}",
                             "name": "$(check) Type check project",
                             "command": "basedpyright"
+                        },
+                        {
+                            "cwd": "{workspaceFolder}",
+                            "name": "$(pencil) Format file",
+                            "useVsCodeApi": true,
+                            "command": "editor.action.formatDocument"
                         },
                         {
                             "cwd": "${workspaceFolder}",

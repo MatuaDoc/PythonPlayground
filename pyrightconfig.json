@@ -1,0 +1,11 @@
+{
+    "typeCheckingMode": "strict",
+    "pythonVersion": "3.14",
+    "reportMissingTypeStubs": false,
+    "reportAny": "error",
+    "reportExplicitAny": "error",
+    "reportImplicitOverride": "error",
+    "reportImplicitStringConcatenation": "error",
+    "reportImportCycles": "warning",
+    "reportUnreachable": "error"
+}
