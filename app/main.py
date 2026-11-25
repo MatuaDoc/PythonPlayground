@@ -11,6 +11,10 @@ def main() -> None:
     """The main program. Y11 does not need to edit this line; Y12/13 must."""
     print("Hello from main!")
 
+    name = 1
+    name = "Potato"
+    print(name)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()
