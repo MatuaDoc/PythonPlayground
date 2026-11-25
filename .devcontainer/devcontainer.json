@@ -1,19 +1,16 @@
 {
-    "image": "mcr.microsoft.com/devcontainers/python:3.14-trixie",
-    "postCreateCommand": "python3 -m pip install --user basedpyright mypy",
+    "image": "mcr.microsoft.com/devcontainers/python:3.15-trixie",
     "customizations": {
         "vscode": {
             "extensions": [
                 "aaron-bond.better-comments",
                 "charliermarsh.ruff",
                 "christian-kohler.path-intellisense",
-                "detachhead.basedpyright",
-                "eamodio.gitlens",
                 "fosshaas.fontsize-shortcuts",
                 "GitHub.vscode-pull-request-github",
                 "IgorSbitnev.error-gutters",
-                "mateocerquetella.xcode-12-theme",
-                "matangover.mypy",
+                "maattdd.gitless",
+                "meta.pyrefly",
                 "oderwat.indent-rainbow",
                 "seunlanlege.action-buttons",
                 "SirTori.indenticator",
@@ -22,6 +19,14 @@
                 "yzhang.markdown-all-in-one"
             ],
             "settings": {
+                "[markdown]": {
+                    "editor.formatOnSave": true,
+                    "editor.defaultFormatter": "charliermarsh.ruff"
+                },
+                "[python]": {
+                    "editor.formatOnSave": true,
+                    "editor.defaultFormatter": "charliermarsh.ruff"
+                },
                 "gitlens.showWhatsNewAfterUpgrades": false,
                 "gitlens.showWelcomeOnInstall": false,
                 "editor.wordWrap": "on",
@@ -40,17 +45,15 @@
                         }
                     ]
                 },
-                "python.analysis.typeCheckingMode": "off",
-                "basedpyright.analysis.typeCheckingMode": "all",
-                "basedpyright.analysis.configFilePath": "${workspaceFolder}/.config/pyrightconfig.json",
-                "basedpyright.analysis.diagnosticMode": "workspace",
                 "gitdoc.commitValidationLevel": "none",
                 "gitdoc.enabled": true,
                 "chat.disableAIFeatures": true,
+                "python.pyrefly.typeCheckingMode": "strict",
+
                 "ruff.format.preview": true,
                 "ruff.lint.preview": true,
                 "ruff.configuration": ".config/ruff.toml",
-                "workbench.colorTheme": "Xcode Classic (Light)",
+                "workbench.colorTheme": "",
                 "actionButtons": {
                     "commands": [
                         {
