@@ -1,0 +1,14 @@
+[tool.pylint.main]
+init-hook = "import sys; sys.path.insert(0, '.config')"
+load-plugins = [
+    "pylint_required_annotations",
+    "pylint_required_arg_labels"
+]
+
+[tool.pylint.messages_control]
+disable = ["all"]
+
+enable = [
+    "missing-variable-annotation",
+    "missing-argument-label"
+]
