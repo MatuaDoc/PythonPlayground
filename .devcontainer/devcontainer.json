@@ -1,5 +1,5 @@
 {
-    "image": "mcr.microsoft.com/devcontainers/python:3.15-trixie",
+    "image": "mcr.microsoft.com/devcontainers/python:3.14-trixie",
     "customizations": {
         "vscode": {
             "extensions": [
@@ -10,7 +10,7 @@
                 "GitHub.vscode-pull-request-github",
                 "IgorSbitnev.error-gutters",
                 "maattdd.gitless",
-                "meta.pyrefly",
+                "ms-python.mypy-type-checker",
                 "oderwat.indent-rainbow",
                 "seunlanlege.action-buttons",
                 "SirTori.indenticator",
@@ -48,12 +48,12 @@
                 "gitdoc.commitValidationLevel": "none",
                 "gitdoc.enabled": true,
                 "chat.disableAIFeatures": true,
-                "python.pyrefly.typeCheckingMode": "strict",
-
+                "mypy-type-checker.args": ["--config-file=/workspaces/PythonPlayground/.config/mypy.toml"],
+                "python.analysis.typeCheckingMode": "off",
                 "ruff.format.preview": true,
                 "ruff.lint.preview": true,
                 "ruff.configuration": ".config/ruff.toml",
-                "workbench.colorTheme": "",
+                "workbench.colorTheme": "Light 2026",
                 "actionButtons": {
                     "commands": [
                         {
