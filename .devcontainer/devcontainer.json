@@ -49,6 +49,7 @@
                 "gitdoc.enabled": true,
                 "chat.disableAIFeatures": true,
                 "mypy-type-checker.args": ["--config-file=/workspaces/PythonPlayground/.config/mypy.toml"],
+                "mypy-type-checker.interpreter": ["/usr/local/bin/python3"],
                 "python.analysis.typeCheckingMode": "off",
                 "ruff.format.preview": true,
                 "ruff.lint.preview": true,
