@@ -7,7 +7,7 @@ Last updated DATE_HERE.
 """
 
 
-def read_number(prompt: str, minimum: float | None, maximum: float | None) -> float | None:
+def read_number(prompt: str, minimum: float | None = None, maximum: float | None = None) -> float | None:
     """Requests a number from the user via the terminal.
 
     Args:
@@ -19,16 +19,18 @@ def read_number(prompt: str, minimum: float | None, maximum: float | None) -> fl
         The requested number or None if outside the bounds.
     """
     user_input: str = input(prompt)
-    user_number: float = minimum - 1.0
+    user_number: float = -1.0
+
     try:
         user_number = float(user_input)
     except ValueError:
         return None
 
-    if user_number < minimum or user_number > maximum:
-        return None
-    else:
-        return 1.0
+    if user_number is float:
+        if user_number < minimum or user_number > maximum:
+            return None
+        else:
+            return 1.0
 
 
 def main() -> None:
