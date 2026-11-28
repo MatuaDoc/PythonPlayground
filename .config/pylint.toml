@@ -1,6 +1,11 @@
 [tool.pylint.main]
 init-hook = "import sys; sys.path.insert(0, '.config')"
 load-plugins = [
+    "pylint_explicit_booleans",
+    "pylint_explicit_conversions",
+    "pylint_explicit_optionals",
+    "pylint_prefer_guard",
+    "pylint_prefer_structured_data",
     "pylint_required_annotations",
     "pylint_required_arg_labels"
 ]
@@ -9,6 +14,12 @@ load-plugins = [
 disable = ["all"]
 
 enable = [
+    "exhaustive-match",
+    "implicit-optional-check",
+    "implicit-numeric-conversion",
     "missing-variable-annotation",
-    "missing-argument-label"
+    "missing-argument-label",
+    "non-boolean-condition",
+    "prefer-guard",
+    "prefer_structured_data"
 ]

@@ -21,47 +21,12 @@
             "settings": {
                 "[markdown]": {
                     "editor.formatOnSave": true,
-                    "editor.defaultFormatter": "charliermarsh.ruff"
+                    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
                 },
                 "[python]": {
                     "editor.formatOnSave": true,
                     "editor.defaultFormatter": "charliermarsh.ruff"
                 },
-                "gitlens.showWhatsNewAfterUpgrades": false,
-                "gitlens.showWelcomeOnInstall": false,
-                "editor.wordWrap": "on",
-                "editor.inlayHints.enabled": "off",
-                "editor.fontSize": 18,
-                "editor.rulers": [
-                    80
-                ],
-                "editor.tokenColorCustomizations": {
-                    "textMateRules": [
-                        {
-                            "scope": "comment",
-                            "settings": {
-                                "fontStyle": "italic"
-                            }
-                        }
-                    ]
-                },
-                "gitdoc.commitValidationLevel": "none",
-                "gitdoc.enabled": true,
-                "chat.disableAIFeatures": true,
-                "mypy-type-checker.args": ["--config-file=${workspaceFolder}/.config/mypy.toml"],
-                "mypy-type-checker.interpreter": ["/usr/local/bin/python3"],
-                "python.analysis.typeCheckingMode": "off",
-                "pylint.args": ["--rcfile=${workspaceFolder}/.config/pylint.toml"],
-                "pylint.cwd": "${workspaceFolder}",
-                "pylint.enabled": true,
-                "pylint.ignorePatterns": ["**/.config/**"],
-                "pylint.importStrategy": "fromEnvironment",
-                "pylint.interpreter": ["/usr/local/bin/python3"],
-                "pylint.lintOnChange": true,
-                "ruff.format.preview": true,
-                "ruff.lint.preview": true,
-                "ruff.configuration": ".config/ruff.toml",
-                "workbench.colorTheme": "Light 2026",
                 "actionButtons": {
                     "commands": [
                         {
@@ -91,7 +56,55 @@
                     "defaultColor": "none",
                     "reloadButton": "↻",
                     "loadNpmCommands": false
-                }
+                },
+                "chat.disableAIFeatures": true,
+                "editor.wordWrap": "on",
+                "editor.inlayHints.enabled": "off",
+                "editor.fontSize": 18,
+                "editor.rulers": [
+                    80
+                ],
+                "editor.tokenColorCustomizations": {
+                    "textMateRules": [
+                        {
+                            "scope": "comment",
+                            "settings": {
+                                "fontStyle": "italic"
+                            }
+                        }
+                    ]
+                },
+                "errorLens.editorHoverPartsEnabled": {
+                    "messageEnabled": true,
+                    "sourceCodeEnabled": true
+                },
+                "errorLens.followCursor": "activeLine",
+                "errorLens.fontFamily": "Helvetica, Arial, sans",
+                "errorLens.fontStyleItalic": true,
+                "errorLens.gutterIconSet": "letter",
+                "errorLens.gutterIconsEnabled": true,
+                "errorLens.gutterIconSize": "80%",
+                "errorLens.statusBarColorsEnabled": true,
+                "errorLens.statusBarIconsEnabled": true,
+                "gitdoc.commitValidationLevel": "none",
+                "gitdoc.enabled": true,
+                "gitlens.showWhatsNewAfterUpgrades": false,
+                "gitlens.showWelcomeOnInstall": false,
+                "mypy-type-checker.args": ["--config-file=${workspaceFolder}/.config/mypy.toml"],
+                "mypy-type-checker.importStrategy": "fromEnvironment",
+                "mypy-type-checker.interpreter": ["/usr/local/bin/python3"],
+                "pylint.args": ["--rcfile=${workspaceFolder}/.config/pylint.toml"],
+                "pylint.cwd": "${workspaceFolder}",
+                "pylint.enabled": true,
+                "pylint.ignorePatterns": ["**/.config/**"],
+                "pylint.importStrategy": "fromEnvironment",
+                "pylint.interpreter": ["/usr/local/bin/python3"],
+                "pylint.lintOnChange": true,
+                "python.analysis.typeCheckingMode": "off",
+                "ruff.format.preview": true,
+                "ruff.lint.preview": true,
+                "ruff.configuration": ".config/ruff.toml",
+                "workbench.colorTheme": "Light 2026"
             }
         }
     }

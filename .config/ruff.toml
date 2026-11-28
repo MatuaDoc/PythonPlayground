@@ -1,16 +1,35 @@
 line-length = 120
 target-version = "py314"
+
 fix = true
 show-fixes = true
+unsafe-fixes = false
+
+force-exclude = true
+extend-exclude = [".config"]
 
 [lint]
 select = ["ALL"]
+preview = true
+explicit-preview-rules = true
+
+extend-select = [
+    "PLR0904",  # Too many public methods
+    "PLR0914",  # Too many local variables
+    "PLR0916",  # Too many Boolean expressions
+    "PLR0917",  # Too many positional parameters
+    "PLR1702",  # Too many nested blocks
+    "PLR1730",  # Prefer min() or max()
+    "PLR1733",  # Unnecessary dictionary index lookup
+    "PLR1736",  # Unnecessary list index lookup
+    "PLW1514",  # Require explicit file encoding
+    "RUF029",   # Unused async declaration
+]
 
 ignore = [
-    # These conflict with Ruff's formatter.
+    # Formatter compatibility
     "COM812",
     "COM819",
-    "CPY001",
     "D206",
     "D300",
     "E111",
@@ -18,16 +37,40 @@ ignore = [
     "E117",
     "ISC001",
     "ISC002",
-    "T201",
     "Q000",
     "Q001",
     "Q002",
     "Q003",
-    "W191"
+    "W191",
+
+    # Allow ordinary student programming
+    "T201",     # Allow print()
+    "CPY001",   # Do not require copyright notices
 ]
 
 [lint.pydocstyle]
 convention = "google"
+
+[lint.mccabe]
+max-complexity = 10
+
+[lint.pylint]
+max-args = 5
+max-positional-args = 5
+max-branches = 12
+max-returns = 6
+max-statements = 50
+max-locals = 15
+max-nested-blocks = 4
+max-bool-expr = 5
+max-public-methods = 20
+
+[lint.flake8-annotations]
+allow-star-arg-any = false
+ignore-fully-untyped = false
+mypy-init-return = false
+suppress-dummy-args = false
+suppress-none-returning = false
 
 [format]
 quote-style = "double"

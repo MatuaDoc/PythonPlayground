@@ -2,33 +2,48 @@
 python_version = "3.14"
 strict = true
 
-# Extra strictness flags NOT included in `strict = true`
+# Additional type safety
 disallow_any_unimported = true
-disallow_any_expr = false            # Warning: flags almost all untyped stdlib/3rd-party calls if true
 disallow_any_decorated = true
 disallow_any_explicit = true
-disallow_any_generics = true
-disallow_subclassing_any = true
+disallow_any_expr = true
 
-# Catch unreachable code, redundant casts, and unused ignores
+# Prevent variable type redefinition
+allow_redefinition = false
+allow_untyped_globals = false
+
+# Strict type semantics
+strict_equality_for_none = true
+strict_bytes = true
+implicit_optional = false
+strict_optional = true
+extra_checks = true
+
+# Control flow
 warn_unreachable = true
-warn_unused_ignores = true
-warn_redundant_casts = true
-warn_return_any = true
 warn_no_return = true
 
-# Strict equality and truthiness checks
-strict_equality = true
-strict_concatenate = true
-
-# Optional error codes beyond `--strict`
+# Additional error codes
 enable_error_code = [
+    "exhaustive-match",
     "ignore-without-code",
     "redundant-expr",
+    "redundant-self",
     "truthy-bool",
     "truthy-iterable",
     "possibly-undefined",
     "explicit-override",
     "mutable-override",
     "unimported-reveal",
+    "unused-awaitable",
+    "deprecated",
 ]
+
+# Diagnostic presentation
+show_error_codes = true
+show_error_context = true
+show_column_numbers = true
+pretty = true
+
+# Exclude tooling
+exclude = ['(^|/)\.config/']
