@@ -2,8 +2,6 @@
 
 Created by YOUR_NAME_HERE.
 Created on DATE_HERE.
-
-Last updated DATE_HERE.
 """
 
 
