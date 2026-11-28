@@ -6,16 +6,14 @@
             "type": "debugpy",
             "request": "launch",
             "program": "${workspaceFolder}/app/main.py",
-            "console": "integratedTerminal",
-            "preLaunchTask": "Typecheck"
+            "console": "integratedTerminal"
         },
         {
             "name": "Run file",
             "type": "debugpy",
             "request": "launch",
             "program": "${file}",
-            "console": "integratedTerminal",
-            "preLaunchTask": "Typecheck"
+            "console": "integratedTerminal"
         }
     ]
 }
